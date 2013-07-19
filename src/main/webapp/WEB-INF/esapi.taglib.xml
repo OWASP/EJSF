@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+
+  
+<facelet-taglib version="2.0">
+    <namespace>http://esapi.com/validation</namespace>
+    
+	<tag>
+		<tag-name>slabel</tag-name>
+		<component>
+            <component-type>customLabel</component-type>
+        </component>
+	</tag>
+	
+	<tag>
+		<tag-name>xssEncoded</tag-name>
+		<component>
+        	<component-type>xssEncodedComponent</component-type>
+        </component>
+	</tag>
+	
+	<tag>
+		<tag-name>xssValidation</tag-name>
+		<component>
+            <component-type>xssValidationComponent</component-type>
+        </component>
+	</tag>
+	
+	<tag>
+		<tag-name>validation</tag-name>
+		<component>
+            <component-type>csapiValidationComponent</component-type>
+        </component>
+	</tag>
+	
+	<tag>
+		<tag-name>owaspCsrfToken</tag-name>
+		<component>
+            <component-type>owaspCsrfTokenComponent</component-type>
+        </component>
+	</tag>
+	
+	<tag>
+		<tag-name>validation</tag-name>
+				<validator>
+    				<validator-id>esapiValidator</validator-id>
+  				</validator>
+  				
+			 		<attribute>
+	        	        <description>name of validation</description>
+	         			<name>name</name>
+	         			<required>true</required>
+	                    <type>java.lang.String</type>
+                    </attribute>
+
+        			<attribute>
+	            		<description>format attribute will use for the date validation</description>
+	            		<name>format</name>
+	            		<required>false</required>
+	            		<type>java.lang.String</type>
+        			</attribute>
+        			
+                    <attribute>
+                    <description>encoding attribute is used for file conding </description>
+                    <name>encoding</name>
+                    <required>false</required>
+                    <type>java.lang.String</type>
+                    </attribute>
+
+	</tag>
+	
+	<tag>
+		<tag-name>authorization</tag-name>
+		<component>
+            <component-type>esapiAuthorization</component-type>
+        </component>
+  		<attribute>
+            <description>Enter User Role</description>
+            <name>role</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+        </attribute>
+	</tag>
+	
+	<tag>
+       <tag-name>csrfpt</tag-name>
+         <component>
+           <component-type>CSRFTokenInput</component-type>
+         </component>
+    </tag>
+</facelet-taglib>
