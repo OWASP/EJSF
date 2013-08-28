@@ -14,6 +14,7 @@ import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+//only a test. matts6
 
 /**
  * OwaspCSRFForm extendes HtmlForm class in order to store new created session token id in
