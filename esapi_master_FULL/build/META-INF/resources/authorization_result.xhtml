@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:esapi="http://esapi.com/validation">
+      
+	<h:body>
+    	<h1>JSF2.0 ESAPI Authorization Result</h1>
+    	<h:form>
+    		<esapi:authorization role="admin">
+    			<h:panelGrid columns="1">
+	 			************************************************* Admin Panel ********************************************************************
+	 			</h:panelGrid>
+    		   
+		  		<h:panelGrid columns="2">
+	 				UserName  : 
+	 				<h:outputText value="#{user.userName}" escape="false">
+	 				</h:outputText>
+	 			</h:panelGrid>
+	 			<h:panelGrid columns="2">
+	 				Password  : 
+	 				<h:outputText value="#{user.password}" escape="false">
+ 					</h:outputText>
+	 			</h:panelGrid>
+	 			<h:panelGrid columns="2">
+	 				Role  : 
+	 				<h:outputText value="#{user.role}" escape="false">
+				</h:outputText>
+	 			</h:panelGrid>
+	 			
+	 			<h:panelGrid columns="1">
+	 			************************************************** End ***************************************************************************
+	 			</h:panelGrid>	
+ 			</esapi:authorization>
+ 			
+ 			<esapi:authorization role="user">
+	 			<h:panelGrid columns="1">
+	 			************************************************* User Panel ********************************************************************
+	 			</h:panelGrid>
+  
+		  		<h:panelGrid columns="2">
+	 				UserName  : 
+	 				<h:outputText value="#{user.userName}" escape="false">
+	 				</h:outputText>
+	 			</h:panelGrid>
+	 			<h:panelGrid columns="2">
+	 				Password  : 
+	 				<h:outputText value="#{user.password}" escape="false">
+ 					</h:outputText>
+	 			</h:panelGrid>
+	 			<h:panelGrid columns="2">
+	 				Role  : 
+	 				<h:outputText value="#{user.role}" escape="false">
+				</h:outputText>
+	 			</h:panelGrid>
+	 			
+	 	    	<h:panelGrid columns="1">
+	 			************************************************** End ***************************************************************************
+	 			</h:panelGrid>	
+ 			</esapi:authorization>
+ 			
+ 			************************************************* General Panel ********************************************************************
+	 		<h:panelGrid columns="2">
+	 				UserName  : 
+	 				<h:outputText value="#{user.userName}" escape="false">
+	 				</h:outputText>
+	 			</h:panelGrid>
+	 			<h:panelGrid columns="2">
+	 				Password  : 
+	 				<h:outputText value="#{user.password}" escape="false">
+ 					</h:outputText>
+	 			</h:panelGrid>
+	 			<h:panelGrid columns="2">
+	 				Role  : 
+	 				<h:outputText value="#{user.role}" escape="false">
+				</h:outputText>
+	 		</h:panelGrid>
+	 		************************************************* End ********************************************************************
+ 			<esapi:owaspCsrfToken/>
+ 		</h:form>
+    </h:body>
+    
+</html>

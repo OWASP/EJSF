@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:jsp="http://java.sun.com/JSP/Page" 
+          xmlns:ui="http://java.sun.com/jsf/facelets" 
+          xmlns:f="http://java.sun.com/jsf/core" 
+          xmlns:h="http://java.sun.com/jsf/html" 
+          xmlns:rich="http://richfaces.org/rich" 
+          xmlns:a4j="http://richfaces.org/a4j"
+          xmlns:c="http://java.sun.com/jstl/core" 
+          xmlns:t="http://myfaces.apache.org/tomahawk" 
+          version="2.0">
+          
+  <ui:component>
+    <div style="background-color: yellow;">
+      <h:outputText value="This is called from a jar file." />
+      <p>
+        <h:outputText value="And works also with parameter: #{parameter}" />
+      </p>
+    </div>
+  </ui:component>
+</jsp:root>

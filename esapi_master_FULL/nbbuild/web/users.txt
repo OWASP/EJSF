@@ -1,0 +1,5 @@
+# This is the user file associated with the ESAPI library from http://www.owasp.org
+# accountId | accountName | hashedPassword | roles | locked | enabled | csrfToken | oldPasswordHashes | lastPasswordChangeTime | lastLoginTime | lastFailedLoginTime | expirationTime | failedLoginCount
+
+6347970547302424477 | admin | 4apECbL9/NyPgAylxX9nD08wfWLKCIgs8XlxVrt79VgFdInT2mLGPQOA0EexNWwUArB67FPTqfTxkVWzR39ghA== | admin | unlocked | enabled |  | unknown | 0 | 0 | 0 | 9223372036854775807 | 0
+1066333872646077817 | user | OPmUG7J371IzLPGjUPjyXtiExbVsZDanWwN93EVi456etQ2FXsTZoJR9ReRms77SSpnqAHak34QxeDDJnXBtzg== |  | unlocked | disabled |  | unknown | 0 | 0 | 0 | 9223372036854775807 | 0

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:esapi="http://esapi.com/validation">
+      
+	<h:body>
+    	<h1>Custom validator in JSF 2.0</h1>
+    		<h:form>
+		  		<h:panelGrid columns="4">
+	 				<h4> User "</h4><h4><h:outputText value="#{user.userName}" escape="false"/></h4><h4>" is logged in now </h4>
+	 				
+	 			</h:panelGrid>
+	 			
+	 			<h:panelGrid columns="2">
+	 				<h4> Value :</h4><h:outputText value="#{user.intValue}" escape="false"/>
+	 			</h:panelGrid>
+	 				
+	 			<h:commandButton action="#{user.action}">
+					<f:param name="action" value="AddValue" />
+				</h:commandButton>
+				
+	 			<h:commandButton value="Logged Out" action="#{user.logout}" />
+ 			</h:form>
+    </h:body>
+</html>

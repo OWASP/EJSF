@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="esapi_project">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../Applications/eclipse"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/annotations-api.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/catalina-ant.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/catalina-ha.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/catalina-tribes.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/catalina.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/ecj-4.2.1.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/el-api.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/jasper-el.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/jasper.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/jsp-api.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/servlet-api.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/tomcat-api.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/tomcat-coyote.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/tomcat-dbcp.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/tomcat-jdbc.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/Apache Tomcat 7.0/apache-tomcat-7.0.39/lib/tomcat-util.jar"/>
+    </path>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="WebContent/WEB-INF/lib/AntiSamy-1.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-beanutils-1.8.3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-codec-1.3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-collections-3.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-digester-1.8.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-fileupload-1.2.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/esapi-2.0.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jsf-desktop-1.1-SNAPSHOT.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jsoup-1.6.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/log4j-1.2.16.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/myfaces-api-2.1.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/myfaces-impl-2.1.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/nekohtml-0.9.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/xercesImpl-2.6.2.jar"/>
+    </path>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="JUnit 4.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.8.2.v4_8_2_v20110321-1705/junit.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+    </path>
+    <path id="esapi_project.classpath">
+        <pathelement location="build/classes"/>
+        <path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+        <pathelement location="WebContent/WEB-INF/lib/AntiSamy-1.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-beanutils-1.8.3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-codec-1.3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-collections-3.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-digester-1.8.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-fileupload-1.2.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/esapi-2.0.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jsoup-1.6.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/log4j-1.2.16.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/myfaces-api-2.1.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/myfaces-impl-2.1.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/nekohtml-0.9.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/xercesImpl-2.6.2.jar"/>
+        <pathelement location="lib/AntiSamy-1.2.jar"/>
+        <pathelement location="lib/commons-beanutils-1.8.3.jar"/>
+        <pathelement location="lib/commons-codec-1.3.jar"/>
+        <pathelement location="lib/commons-collections-3.2.jar"/>
+        <pathelement location="lib/commons-digester-1.8.jar"/>
+        <pathelement location="lib/commons-digester3-3.1.jar"/>
+        <pathelement location="lib/commons-fileupload-1.2.2.jar"/>
+        <pathelement location="lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="lib/easymock-2.5.jar"/>
+        <pathelement location="lib/easymockclassextension-2.4.jar"/>
+        <pathelement location="lib/esapi-2.0.1.jar"/>
+        <pathelement location="lib/guice-2.0.jar"/>
+        <pathelement location="lib/jasper.jar"/>
+        <pathelement location="lib/javaee.jar"/>
+        <pathelement location="lib/javax.el_2.2.0.v201105051105.jar"/>
+        <pathelement location="lib/javax.el.jar"/>
+        <pathelement location="lib/javax.servlet.jar"/>
+        <pathelement location="lib/javax.validation-1.0.0.GA.jar"/>
+        <pathelement location="lib/jdom-1.0.jar"/>
+        <pathelement location="lib/jsf2.0_esapi.jar"/>
+        <pathelement location="lib/jsf-impl.jar"/>
+        <pathelement location="lib/jsfunit-arquillian-2.0.0.Beta2.jar"/>
+        <pathelement location="lib/jsoup-1.6.1.jar"/>
+        <pathelement location="lib/jsoup-1.6.1-sources.jar"/>
+        <pathelement location="lib/jsp-2.1-6.1.9.jar"/>
+        <pathelement location="lib/jsp-api-6.0.14.jar"/>
+        <pathelement location="lib/jstl-1.2.jar"/>
+        <pathelement location="lib/junit-4.3.1.jar"/>
+        <pathelement location="lib/log4j-1.2.16.jar"/>
+        <pathelement location="lib/myfaces-api-2.1.4.jar"/>
+        <pathelement location="lib/myfaces-builder-annotations-1.0.1.jar"/>
+        <pathelement location="lib/myfaces-builder-annotations-1.0.4.jar"/>
+        <pathelement location="lib/myfaces-builder-annotations-1.0.5.jar"/>
+        <pathelement location="lib/myfaces-bundle-2.1.4.jar"/>
+        <pathelement location="lib/myfaces-impl-2.1.3-sources.jar"/>
+        <pathelement location="lib/myfaces-impl-2.1.4.jar"/>
+        <pathelement location="lib/nekohtml-0.9.1.jar"/>
+        <pathelement location="lib/New_Esapi.jar"/>
+        <pathelement location="lib/Owasp.CsrfGuard.jar"/>
+        <pathelement location="lib/owasp-esapi-java-1.1.1.jar"/>
+        <pathelement location="lib/servlet-2.3.jar"/>
+        <pathelement location="lib/shared-7.0.19.2.jar"/>
+        <pathelement location="lib/tomahawk-1.1.8.jar"/>
+        <pathelement location="lib/xercesImpl-2.6.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jsf-desktop-1.1-SNAPSHOT.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="esapi_project.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="esapi_project (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="esapi.unifreiburg.testing.EsapiValidationTest" todir="${junit.output.dir}"/>
+            <test name="esapi.unifreiburg.validator.EsapiTestCase" todir="${junit.output.dir}"/>
+            <classpath refid="esapi_project.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+	
+	
+	
+	
+	<!-- Variables -->	
+	
+	
+	<property name="dest.doc"  location="doc2"/>
+	
+	
+	
+	
+	<!-- Generate JavaDoc -->
+	
+	<target name="doc" depends="init" description="generate documentation">
+	    <javadoc sourcepath="src" destdir="${dest.doc}"/>
+	  </target>
+	
+	<!-- create JAR with JavaDoc -->
+
+	<target name="jar">
+		
+			<javadoc sourcepath="src" destdir="${dest.doc}"/>
+	        <jar destfile="jar/esapi.jar">
+	        	<fileset dir="build/classes"/>
+	        	<fileset dir="${dest.doc}"/>
+	        	<!--<fileset file="WebContent/WEB-INF/web.xml"/>
+	        	<fileset file="WebContent/WEB-INF/faces-config.xml"/>
+	        	<fileset file="WebContent/WEB-INF/esapi.taglib.xml"/>-->
+	       	</jar>
+    		<copy file="WebContent/WEB-INF/web.xml" tofile="jar/configfile/web.xml"/>
+			<copy file="WebContent/WEB-INF/faces-config.xml" tofile="jar/configfile/faces-config.xml"/>
+			<copy file="WebContent/WEB-INF/esapi.taglib.xml" tofile="jar/configfile/esapi.taglib.xml"/>
+	</target>
+	
+</project>

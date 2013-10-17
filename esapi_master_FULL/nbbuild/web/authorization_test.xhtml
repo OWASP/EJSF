@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:esapi="http://esapi.com/validation">
+      
+    <h:body>
+    
+	    <h1>JSF2.0 ESAPI Authorization </h1>
+		<h:form>
+			<h:panelGrid columns="2">
+				Enter Username :
+				<h:inputText id="user" value="#{user.userName}" required="#{true}" label="Enter Username :">
+				</h:inputText> 
+			</h:panelGrid>
+			
+			<h:panelGrid columns="2">
+				Enter Password :
+				<h:inputSecret id="password" value="#{user.password}" required="#{true}" label="Enter Password :">
+				</h:inputSecret>
+			</h:panelGrid>
+			
+			<h:message for="user" style="color:red" />
+			<h:message for="password" style="color:red" />
+			<h:message for="role" style="color:red" />
+			<h:commandButton  value="Submit" action="#{user.authentication}" />
+	   	</h:form>
+	   	<h:form>
+	    	<h:commandLink action="authorization_result" value="Without Login"></h:commandLink>
+	    </h:form>
+    </h:body>
+    
+</html>
