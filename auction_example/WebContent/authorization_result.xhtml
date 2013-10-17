@@ -1,0 +1,46 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:esapi="http://esapi.com/validation">
+
+<f:view contentType="text/html" />
+<h:head>
+	<title>Auction</title>
+</h:head>
+<h:body bgcolor="white">
+	<h:form id="helloForm">
+		<h2>Welcome to the shop example, you can buy an item</h2>
+
+		<h:panelGrid columns="1">
+			Product 1      		#{auctionBean.price} .- CHF
+		</h:panelGrid>
+		
+		<h:panelGrid columns="2">
+		Choose quantity
+		<h:inputText id="quantity" value="#{auctionBean.quantity}" required="#{true}"
+				label="Enter Credit Card" size="2">
+				<esapi:validation name="DIGIT" />
+			</h:inputText>
+			<h:message for="quantity" style="color:red" />
+		</h:panelGrid>
+
+		<h:commandButton id="submit"
+			action="order?faces-redirect=true" value="Buy" />
+		<p />
+
+
+		<h:message showSummary="true" showDetail="false" errorClass="error"
+			id="errors1" for="userNo" />
+
+		<esapi:owaspCsrfToken />
+	</h:form>
+
+	<h:form>
+			<h:commandButton id="Logout" value="Logout" action="#{user2.logout}" />
+	</h:form>
+
+</h:body>
+</html>

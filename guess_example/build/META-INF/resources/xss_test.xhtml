@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:esapi="http://esapi.com/validation">
+      
+    <h:body>
+	    <h1>JSF2.0 ESAPI XSS Test Page</h1>
+		<h:form>
+			<h:panelGrid columns="3">
+ 				Enter Input :
+ 				<h:inputText id="input" value="#{user.input}" required="#{true}" label="Enter input">
+				</h:inputText>
+				<h:message for="input" style="color:red" />
+ 			</h:panelGrid>
+ 			<br></br>
+			<h:commandButton  value="Submit" action="xss_result" />
+	   	</h:form>
+    </h:body>
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:esapi="http://esapi.com/validation">
+
+<h:body>
+	<h1>Credit card information</h1>
+	<h:form>
+		<h:panelGrid columns="1">
+			Price : #{auctionBean.price}  .- CHF
+		</h:panelGrid>
+
+		<h:panelGrid columns="1">
+			Quantity : #{auctionBean.quantity}
+		</h:panelGrid>
+
+		<h:panelGrid columns="1">
+			total :  #{auctionBean.totalPrice} .- CHF
+		</h:panelGrid>
+
+
+		<h:panelGrid columns="3">
+			Credit Card Number : 
+			<h:inputText id="input6" value="#{user2.input6}" required="#{true}"
+				label="Enter Credit Card">
+				<esapi:validation name="CREDITCARD" />
+			</h:inputText>
+			<h:message for="input6" style="color:red" />
+		</h:panelGrid>
+
+		<p>
+			<h:panelGrid columns="1">
+				<h:commandButton id="confirm" value="Confirm"
+					action="confirmation?faces-redirect=true" />
+			</h:panelGrid>
+
+
+		</p>
+
+		<!--  <h:commandButton id="back" value="Back" action="auction?faces-redirect=true" />-->
+		<p></p>
+
+		<esapi:owaspCsrfToken />
+
+	</h:form>
+	<h:form>
+		<h:commandButton id="Logout" value="Logout" action="#{user.logout}" />
+	</h:form>
+
+</h:body>
+
+</html>

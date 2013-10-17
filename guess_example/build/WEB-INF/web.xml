@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5"
+	metadata-complete="false"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>JavaServerFaces</display-name>
+
+	<!-- <context-param> <param-name>com.sun.faces.compressViewState</param-name> 
+		<param-value>false</param-value> </context-param> -->
+
+	<!-- <context-param> <param-name>javax.faces.PROJECT_STAGE</param-name> 
+		<param-value>Development</param-value> </context-param> <context-param> <param-name>javax.faces.STATE_SAVING_METHOD</param-name> 
+		<param-value>client</param-value> </context-param> -->
+
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.faces</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- <filter> <filter-name>CsrfFilter</filter-name> <filter-class>esapi.unifreiburg.csrf.OwaspCSRFSessionFilter</filter-class> 
+		</filter> <filter-mapping> <filter-name>CsrfFilter</filter-name> <url-pattern>*.xhtml</url-pattern> 
+		</filter-mapping> -->
+
+	<welcome-file-list>
+		<!-- <welcome-file>faces/xss_test.xhtml</welcome-file> -->
+		<welcome-file>faces/index.xhtml</welcome-file>
+		<!-- <welcome-file>faces/csrf_test.xhtml</welcome-file> -->
+		<!-- <welcome-file>faces/authorization_test.xhtml</welcome-file> -->
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>facelets.LIBRARIES</param-name>
+		<param-value>/WEB-INF/esapi.taglib.xml</param-value>
+	</context-param>
+
+	<!--Ressource resolver pour le fichier JSRResolver.java-->
+	<!--<context-param>
+		<param-name>facelets.RESOURCE_RESOLVER</param-name>
+		<param-value>resolver.JSFResolver</param-value>
+	</context-param>-->
+
+	<listener>
+		<description>OwaspCSRFSessionListener</description>
+		<listener-class>esapi.unifreiburg.csrf.OwaspCSRFSessionListener</listener-class>
+	</listener>
+
+</web-app>

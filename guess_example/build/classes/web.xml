@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" metadata-complete="false" version="2.5">
+	<display-name>JavaServerFaces</display-name>
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.faces</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+
+	<env-entry>
+		<description>Minimum Guess</description>
+		<env-entry-name>minimum</env-entry-name>
+		<env-entry-type>java.lang.Integer</env-entry-type>
+		<env-entry-value>1</env-entry-value>
+	</env-entry>
+	<env-entry>
+		<description>Maximum Guess</description>
+		<env-entry-name>maximum</env-entry-name>
+		<env-entry-type>java.lang.Integer</env-entry-type>
+		<env-entry-value>100</env-entry-value>
+	</env-entry>
+	<welcome-file-list>
+		<welcome-file>faces/login.xhtml</welcome-file>
+	</welcome-file-list>
+
+	<filter>
+		<filter-name>CsrfFilter</filter-name>
+		<filter-class>ch.security4web.esapi.csrf.OwaspCSRFSessionFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>AuthorizationFilter</filter-name>
+		<filter-class>ch.security4web.esapi.authentication.EsapiAuthorizationFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>POSTFilter</filter-name>
+		<filter-class>ch.security4web.esapi.authentication.EsapiPOSTFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>POSTFilter</filter-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</filter-mapping>
+	<context-param>
+		<param-name>facelets.LIBRARIES</param-name>
+		<param-value>/WEB-INF/esapi.taglib.xml</param-value>
+	</context-param>
+	<listener>
+		<description>OwaspCSRFSessionListener</description>
+		<listener-class>ch.security4web.esapi.csrf.OwaspCSRFSessionListener</listener-class>
+	</listener>
+
+</web-app>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:esapi="http://esapi.com/validation">
+
+<h:body>
+	<h1>Register information</h1>
+	<h:form>
+	
+		<h:panelGrid columns="3">
+			Username : 
+			<h:inputText id="input1" value="#{user2.input1}" required="#{true}"
+				label="Enter Email Id">
+				<esapi:validation name="SAFESTRING" />
+			</h:inputText>
+			<h:message for="input1" style="color:red" />
+		</h:panelGrid>
+		
+		<h:panelGrid columns="3">
+			First and last Name : 
+			<h:inputText id="input2" value="#{user2.input2}" required="#{true}"
+				label="Enter Email Id">
+				<esapi:validation name="SAFESTRING" />
+			</h:inputText>
+			<h:message for="input2" style="color:red" />
+		</h:panelGrid>
+
+		<h:panelGrid columns="3">
+			Email : 
+			<h:inputText id="input3" value="#{user2.input3}" required="#{true}"
+				label="Enter Email Id">
+				<esapi:validation name="EMAIL" />
+			</h:inputText>
+			<h:message for="input3" style="color:red" />
+		</h:panelGrid>
+
+		<h:panelGrid columns="4">
+			Password : 
+			<h:inputSecret id="input4" value="#{user2.input4}" required="#{true}"
+				label="Enter Email Id">
+				<esapi:validation name="PASSWORD" />
+			</h:inputSecret>
+			<h:message for="input4" style="color:red" />
+			Min length 8, 2 uppercase, 3 lowercase, 2 digits and 1 special char
+		</h:panelGrid>
+		
+		<h:panelGrid columns="3">
+			Repeat Password : 
+			<h:inputSecret id="input5" value="#{user2.input5}" required="#{true}"
+				label="Enter Email Id">
+				<esapi:validation name="PASSWORD" />
+			</h:inputSecret>
+			<h:message for="input5" style="color:red" />
+		</h:panelGrid>
+
+		<p>
+			<h:panelGrid columns="1">
+				<!-- <h:commandButton id="register" value="Register" action="login?faces-redirect=true" /> -->
+				<h:commandButton id="register" value="Register" action="#{user2.createUser}" />
+				
+			</h:panelGrid>
+
+		</p>
+
+		<esapi:owaspCsrfToken />
+
+	</h:form>
+
+</h:body>
+
+</html>
